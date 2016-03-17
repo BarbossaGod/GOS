@@ -48,5 +48,4 @@ OnTick(function (myHero)
 		end
 				
 end) 
-
 print("BlitzcrankVer1.0 loaded")
