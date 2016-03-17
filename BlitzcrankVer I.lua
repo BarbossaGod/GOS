@@ -22,7 +22,7 @@ OnTick(function (myHero)
 				
 				            local RPred = GetPredictionForPlayer(GetOrigin(myHero), target, GetMoveSpeed(target), 1750, 25, 925, 231.25, false, true)
                             	if RPred.HitChance == 1 then
-                                     CastSkillShot(_R,RPred.PredPos)								
+                                     CastSkillShot(_Q,RPred.PredPos)								
 				end
 				
 				if BlitzcrankMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 1000) then
