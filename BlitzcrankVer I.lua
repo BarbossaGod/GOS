@@ -47,6 +47,22 @@ OnTick(function (myHero)
 			
 		end
 				
-end) 
+ end
 
+       
+	   
+	   for _, enemy in pairs (GetEnemyHeroes()) do 
+       if BlitzcrankMenu.Combo.R:Value() and BlitzcrankMenu.Combo.KSR:Value() and Ready(_R) and ValidTarget(enemy, 600) then 
+	         
+			 if GetCurrentHp(enemy) < CalcDamage(myHero, enemy, 0, 125 + 125 * GetCastLevel(myHero,_R) + GetBonusAP(myHero) * 1.0) then 
+			        
+				     CastSpell(_R)
+			end
+		
+         end
+		
+     end
+		
+end)
+		 
 print("BlitzcrankVer1.0 loaded")
