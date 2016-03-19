@@ -13,56 +13,31 @@ BlitzcrankMenu.Combo:Boolean("KSR", "Killsteal with R", true)
 
 
 OnTick(function (myHero)
-
-	    local target = GetCurrentTarget()
-		
-		if IOW:Mode() == "Combo" then
-		
-		        if BlitzcrankMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 925) then
-				
-				            local RPred = GetPredictionForPlayer(GetOrigin(myHero), target, GetMoveSpeed(target), 1750, 25, 925, 100, true, true)
-                            	if RPred.HitChance == 1 then
-                                     CastSkillShot(_Q,RPred.PredPos)	
-
-							end		 
-				end
-				
-				if BlitzcrankMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 1000) then
-				             
-							 CastSpell(_W)
-				end
-				
-				if BlitzcrankMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 150) then
-				
-				             CastSpell(_E)
-							 
-				end
-				
-				if BlitzcrankMenu.Combo.R:Value() and Ready(_R) and ValidTarget(target, 600) then
-				
-				             CastSpell(_R)
-							 
-				end
-				
-			
+	local target = GetCurrentTarget()	
+	if IOW:Mode() == "Combo" then
+		if BlitzcrankMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 925) then
+			local RPred = GetPredictionForPlayer(GetOrigin(myHero), target, GetMoveSpeed(target), 1750, 25, 925, 100, true, true)
+            if RPred.HitChance == 1 then
+				CastSkillShot(_Q,RPred.PredPos)	
+			end		 
 		end
-				
- end
-
-       
-	   
-	   for _, enemy in pairs(GetEnemyHeroes()) do 
-       if BlitzcrankMenu.Combo.R:Value() and BlitzcrankMenu.Combo.KSR:Value() and Ready(_R) and ValidTarget(enemy, 600) then 
-	         
-			 if GetCurrentHP(enemy) < CalcDamage(myHero, enemy, 0, (125 + 125 * GetCastLevel(myHero,_R) + GetBonusAP(myHero)) then 
-			        
-				     CastSpell(_R)
+		if BlitzcrankMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 1000) then	             
+			CastSpell(_W)
+		end	
+		if BlitzcrankMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 150) then	
+			CastSpell(_E)
+		end	
+		if BlitzcrankMenu.Combo.R:Value() and Ready(_R) and ValidTarget(target, 600) then	
+			CastSpell(_R)			 
+		end
+	end
+	for _, enemy in pairs(GetEnemyHeroes()) do 
+		if BlitzcrankMenu.Combo.R:Value() and BlitzcrankMenu.Combo.KSR:Value() and Ready(_R) and ValidTarget(enemy, 600) then 
+			if GetCurrentHP(enemy) < CalcDamage(myHero, enemy, 0, (125 + 125 * GetCastLevel(myHero,_R) + GetBonusAP(myHero))) then 
+				CastSpell(_R)
 			end
-		
-         end
-		
-     end
-		
+		end	
+	end		
 end)
 		 
 print("BlitzcrankVer1.0 loaded")
