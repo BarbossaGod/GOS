@@ -10,7 +10,13 @@ BlitzcrankMenu.Combo:Boolean("E", "Use E", true)
 BlitzcrankMenu.Combo:Boolean("R", "Use R", true)
 BlitzcrankMenu.Combo:Boolean("KSQ", "Killsteal with Q", true)
 BlitzcrankMenu.Combo:Boolean("KSR", "Killsteal with R", true)
-
+BlitzcrankMenu:SubMenu("draw", "Draws")
+BlitzcrankMenu.draw:Slider("cwidth", "Circle Width", 1, 1, 10, 1)
+BlitzcrankMenu.draw:Slider("cquality", "Circle Quality", 1, 0, 8, 1)
+BlitzcrankMenu.draw:Boolean("qdraw", "Draw Q", true)
+BlitzcrankMenu.draw:ColorPick("qcirclecol", "Q Circle color", {255, 134, 26, 217}) 
+BlitzcrankMenu.draw:Boolean("rdraw", "Draw R", true)
+BlitzcrankMenu.draw:ColorPick("rcirclecol", "R Circle color", {255, 134, 26, 217})
 
 OnTick(function (myHero)
 	local target = GetCurrentTarget()	
@@ -38,6 +44,17 @@ OnTick(function (myHero)
 			end
 		end	
 	end		
+end)
+
+OnDraw (function()
+	if not IsDead(myHero) then
+		if BlitzcrankMenu.draw.qdraw:Value() and Ready(_Q) then
+			DrawCircle(GetOrigin(myHero), 925, BlitzcrankMenu.draw.cwidth:Value(), BlitzcrankMenu.draw.cquality:Value(), BlitzcrankMenu.draw.qcirclecol:Value())
+		end
+		if BlitzcrankMenu.draw.rdraw:Value() and Ready(_R) then 
+			DrawCircle(GetOrigin(myHero), 600, BlitzcrankMenu.draw.cwidth:Value(), BlitzcrankMenu.draw.cquality:Value(), BlitzcrankMenu.draw.rcirclecol:Value())
+		end
+	end
 end)
 		 
 print("BlitzcrankVer1.0 loaded")
