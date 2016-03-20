@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) ~= "Blitzcrank" then return end
 
-local ver = "0.01"
+local ver = "0.02"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -15,7 +15,7 @@ end
 GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/BlitzcrankVer%20I.version", AutoUpdate)
 
 require("Inspired")
-
+print("i updated")
 local BlitzcrankMenu = Menu("Blitzcrank", "Blitzcrank")
 BlitzcrankMenu:SubMenu("Combo", "Combo")
 BlitzcrankMenu.Combo:Boolean("Q", "Use Q", true)
