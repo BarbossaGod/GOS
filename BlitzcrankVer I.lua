@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) ~= "Blitzcrank" then return end
 
-local ver = "0.14"
+local ver = "0.01"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
