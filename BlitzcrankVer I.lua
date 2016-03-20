@@ -1,5 +1,19 @@
 if GetObjectName(GetMyHero()) ~= "Blitzcrank" then return end
 
+local ver = "0.14"
+
+function AutoUpdate(data)
+    if tonumber(data) > tonumber(ver) then
+        PrintChat("New version found! " .. data)
+        PrintChat("Downloading update, please wait...")
+        DownloadFileAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/BlitzcrankVer%20I.lua", SCRIPT_PATH .. "BlitzcrankVerI.lua", function() PrintChat("Update Complete, please 2x F6!") return end)
+    else
+        PrintChat("No updates found!")
+    end
+end
+
+GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/BlitzcrankVer%20I.version", AutoUpdate)
+
 require("Inspired")
 
 local BlitzcrankMenu = Menu("Blitzcrank", "Blitzcrank")
