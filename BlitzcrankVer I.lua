@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) ~= "Blitzcrank" then return end
 
-local ver = "0.04"
+local ver = "0.05"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -15,6 +15,7 @@ end
 GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/BlitzcrankVer%20I.version", AutoUpdate)
 
 require("Inspired")
+require("OpenPredict")
 local BlitzcrankMenu = Menu("Blitzcrank", "Blitzcrank")
 BlitzcrankMenu:SubMenu("Combo", "Combo")
 BlitzcrankMenu.Combo:Boolean("Q", "Use Q", true)
@@ -30,14 +31,14 @@ BlitzcrankMenu.draw:Boolean("qdraw", "Draw Q", true)
 BlitzcrankMenu.draw:ColorPick("qcirclecol", "Q Circle color", {255, 134, 26, 217}) 
 BlitzcrankMenu.draw:Boolean("rdraw", "Draw R", true)
 BlitzcrankMenu.draw:ColorPick("rcirclecol", "R Circle color", {255, 134, 26, 217})
-
+local BlitzcrankQ = {delay = 0.22, range = 925, width = 70, speed = 1750}
 OnTick(function (myHero)
 	local target = GetCurrentTarget()	
 	if IOW:Mode() == "Combo" then
 		if BlitzcrankMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 925) then
-			local RPred = GetPredictionForPlayer(GetOrigin(myHero), target, GetMoveSpeed(target), 1750, 25, 925, 100, true, true)
-            if RPred.HitChance == 1 then
-				CastSkillShot(_Q,RPred.PredPos)	
+		local QPred = GetPrediction(target,BlitzcrankQ)
+			if QPred.hitChance > 0.2 then
+				CastSkillShot(_Q,QPred.castPos)
 			end		 
 		end
 		if BlitzcrankMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 1000) then	             
@@ -70,4 +71,4 @@ OnDraw (function()
 	end
 end)
 		 
-print("BlitzcrankVer1.0 loaded")
+print("BlitzcrankVer1.2 loaded")
