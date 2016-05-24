@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) ~= "Nautilus" then return end
 
-local ver = "0.06"
+local ver = "0.01"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -20,10 +20,7 @@ NautilusMenu:SubMenu("Combo", "Combo")
 NautilusMenu:SubMenu("Interupter", "Interupter")
 NautilusMenu:SubMenu("SubReq",  "AutoLevel Settings")
 NautilusMenu:SubMenu("RS", "R Selector")
-for _, unit in paris(GetEnemyHeroes()) do
-for i = 1,4 do
 NautilusMenu.RS:Boolean("RS", "R Selector")
-end 
 NautilusMenu.SubReq:Boolean("LevelUp", "Level Up Skills", true)
 NautilusMenu.SubReq:Slider("Start_Level", "Level to enable lvlUP", 1, 1, 17)
 NautilusMenu.SubReq:DropDown("autoLvl", "Skill order", 1, {"E-Q-W","Q-W-Q","Q-E-W",})
