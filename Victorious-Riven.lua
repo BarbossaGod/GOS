@@ -12,7 +12,7 @@ function AutoUpdate(data)
     end
 end
 
-GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Versions/NautilusVersion.lua", AutoUpdate)
+GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Versions/Victorious-Riven.version", AutoUpdate)
 
 require("OpenPredict")
 local RivenMenu = Menu("Riven", "Riven - The Exile")
