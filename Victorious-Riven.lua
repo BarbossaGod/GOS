@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) ~= "Riven" then return end
 
-local ver = "0.02"
+local ver = "0.03"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -72,14 +72,14 @@ OnTick(function()
 		if RivenMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 400) then	             
 			CastSkillShot(_E, target.pos)
 		end
+		if RivenMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 260) then	             
+			CastSpell(_W)
+		end
 		if RivenMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 250) then	
 			local QPred = GetPredictionForPlayer(GetOrigin(myHero), target, GetMoveSpeed(target), math.huge, 75, 600, 150, false, true)
 			if QPred.HitChance == 1 then
 				CastSkillShot(_Q,QPred.PredPos)	
 			end	
-		end
-		if RivenMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 260) then	             
-			CastSpell(_W)
 		end
 		-- killsteal
 		for _, enemy in pairs(GetEnemyHeroes()) do
