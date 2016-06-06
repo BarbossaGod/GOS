@@ -47,6 +47,7 @@ RivenMenu.SubReq:Boolean("Humanizer", "Enable Level Up Humanizer", true)
 local RivenQ = {delay = .5, range = 250 , radius = 0, speed = 0}
 local RivenE = {delay = 0, range = 325, radius = 0, speed = 1450}
 local igniteFound = false
+local summonerSpells = {ignite = {}, flash = {}, heal = {}, barrier = {}}
 local LevelUpTable={
 	[1]={_E,_Q,_W,_Q,_Q,_R,_Q,_E,_Q,_E,_R,_E,_E,_W,_W,_R,_W,_W}
 }	
