@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) ~= "Nautilus" then return end
 
-local ver = "0.01"
+local ver = "0.02"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -85,39 +85,39 @@ OnTick (function()
 		end
 end)
 
-OnProcessSpell(function(unit,spellProc)
-	if GetTeam(unit) ~= MINION_ALLY and Interupter[spellProc.name]	then
-		if NautilusMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(unit, 1000) then 
-		local QPred = GetPrediction(unit,NautilusQ)
-			if QPred.hitChance > 0.2 and not QPred:mCollision(1) then
-				CastSkillShot(_Q,QPred.castPos)
-			end
-		end
-	end
-end)
+--]OnProcessSpell(function(unit,spellProc)
+	--if GetTeam(unit) ~= MINION_ALLY and Interupter[spellProc.name]	then
+		--if NautilusMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(unit, 1000) then 
+		--local QPred = GetPrediction(unit,NautilusQ)
+			--if QPred.hitChance > 0.2 and not QPred:mCollision(1) then
+				--CastSkillShot(_Q,QPred.castPos)
+			--end
+		--end
+	--end
+--end)
 
-local Interupter = {
-    ["CaitlynAceintheHole"]         = {charName = "Caitlyn"		},
-    ["Crowstorm"]                   = {charName = "FiddleSticks"},
-    ["Drain"]                       = {charName = "FiddleSticks"},
-    ["GalioIdolOfDurand"]           = {charName = "Galio"		},
-    ["ReapTheWhirlwind"]            = {charName = "Janna"		},
-	["JhinR"]						= {charName = "Jhin"		},
-    ["KarthusFallenOne"]            = {charName = "Karthus"     },
-    ["KatarinaR"]                   = {charName = "Katarina"    },
-    ["LucianR"]                     = {charName = "Lucian"		},
-    ["AlZaharNetherGrasp"]          = {charName = "Malzahar"	},
-    ["MissFortuneBulletTime"]       = {charName = "MissFortune"	},
-    ["AbsoluteZero"]                = {charName = "Nunu"		},                       
-    ["PantheonRJump"]               = {charName = "Pantheon"	},
-    ["ShenStandUnited"]             = {charName = "Shen"		},
-    ["Destiny"]                     = {charName = "TwistedFate"	},
-    ["UrgotSwap2"]                  = {charName = "Urgot"		},
-    ["VarusQ"]                      = {charName = "Varus"		},
-    ["VelkozR"]                     = {charName = "Velkoz"		},
-    ["InfiniteDuress"]              = {charName = "Warwick"		},
-    ["XerathLocusOfPower2"]         = {charName = "Xerath"		},
-}
+--local Interupter = {
+   -- ["CaitlynAceintheHole"]         = {charName = "Caitlyn"		},
+   -- ["Crowstorm"]                   = {charName = "FiddleSticks"},
+  --  ["Drain"]                       = {charName = "FiddleSticks"},
+  --  ["GalioIdolOfDurand"]           = {charName = "Galio"		},
+   -- ["ReapTheWhirlwind"]            = {charName = "Janna"		},
+	--["JhinR"]						= {charName = "Jhin"		},
+  --  ["KarthusFallenOne"]            = {charName = "Karthus"     },
+   -- ["KatarinaR"]                   = {charName = "Katarina"    },
+   -- ["LucianR"]                     = {charName = "Lucian"		},
+   -- ["AlZaharNetherGrasp"]          = {charName = "Malzahar"	},
+   -- ["MissFortuneBulletTime"]       = {charName = "MissFortune"	},
+   -- ["AbsoluteZero"]                = {charName = "Nunu"		},                       
+    --["PantheonRJump"]               = {charName = "Pantheon"	},
+   -- ["ShenStandUnited"]             = {charName = "Shen"		},
+   -- ["Destiny"]                     = {charName = "TwistedFate"	},
+    --["UrgotSwap2"]                  = {charName = "Urgot"		},
+   -- ["VarusQ"]                      = {charName = "Varus"		},
+  --  ["VelkozR"]                     = {charName = "Velkoz"		},
+   -- ["InfiniteDuress"]              = {charName = "Warwick"		},
+   -- ["XerathLocusOfPower2"]         = {charName = "Xerath"		},
+--}
 
 
 
