@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) ~= "Nautilus" then return end
 
-local ver = "0.02"
+local ver = "0.01"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -65,14 +65,6 @@ OnTick(function (myHero)
 			CastTargetSpell(_R)
 		end
 	end
-	if NautilusMenu.SubReq.LevelUp:Value() and GetLevelPoints(myHero) >= 1 and GetLevel(myHero) >= NautilusMenu.SubReq.Start_Level:Value() then
-		if NautilusMenu.SubReq.Humanizer:Value() then
-			DelayAction(function() LevelSpell(LevelUpTable[NautilusMenu.SubReq.autoLvl:Value()][GetLevel(myHero)-GetLevelPoints(myHero)+1]) end, math.random(0.3286,1.33250))
-			else
-				LevelSpell(LevelUpTable[NautilusMenu.SubReq.autoLvl:Value()][GetLevel(myHero)-GetLevelPoints(myHero)+1])
-			end
-		end
-	end
 end)
 	 
 lastSkin = 0
@@ -82,6 +74,16 @@ function ChooseSkin()
 		HeroSkinChanger(myHero, NautilusMenu.misc.skinList:Value())
 	end
 end
+
+OnTick (function()
+		if NautilusMenu.SubReq.LevelUp:Value() and GetLevelPoints(myHero) >= 1 and GetLevel(myHero) >= NautilusMenu.SubReq.Start_Level:Value() then
+			if NautilusMenu.SubReq.Humanizer:Value() then
+			DelayAction(function() LevelSpell(LevelUpTable[NautilusMenu.SubReq.autoLvl:Value()][GetLevel(myHero)-GetLevelPoints(myHero)+1]) end, math.random(0.3286,1.33250))
+			else
+				LevelSpell(LevelUpTable[NautilusMenu.SubReq.autoLvl:Value()][GetLevel(myHero)-GetLevelPoints(myHero)+1])
+			end
+		end
+end)
 
 OnProcessSpell(function(unit,spellProc)
 	if GetTeam(unit) ~= MINION_ALLY and Interupter[spellProc.name]	then
