@@ -37,7 +37,7 @@ OnTick(function (myHero)
 	if IOW:Mode() == "Combo" then
 		if BlitzcrankMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 925) then
 		local QPred = GetPrediction(target,BlitzcrankQ)
-			if QPred.hitChance > 0.2 then
+			if QPred.hitChance > 0.5 then
 				CastSkillShot(_Q,QPred.castPos)
 			end		 
 		end
