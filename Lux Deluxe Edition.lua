@@ -6,7 +6,7 @@ function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
         PrintChat("New version found! " .. data)
         PrintChat("Downloading update, please wait...")
-        DownloadFileAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Victorious-Riven.lua", SCRIPT_PATH .. "Victorious-Riven.lua", function() PrintChat("Update Complete, please 2x F6!") return end)
+        DownloadFileAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Lux%20Deluxe%20Edition.lua", SCRIPT_PATH .. "Lux-Deluxe-Edition.lua", function() PrintChat("Update Complete, please 2x F6!") return end)
     else
         PrintChat("No updates found!")
     end
