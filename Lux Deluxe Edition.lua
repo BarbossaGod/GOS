@@ -12,7 +12,7 @@ function AutoUpdate(data)
     end
 end
 
-GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Versions/Victorious-Riven.version", AutoUpdate)
+GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Versions/LuxDeluxeEdition.version", AutoUpdate)
 
 require("OpenPredict")
 local LuxMenu = Menu("Lux", "The Lady of Luminosity ")
