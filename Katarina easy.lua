@@ -1,7 +1,5 @@
 if GetObjectName(GetMyHero()) ~= "Katarina" then return end
 
-require("Inspired")
-
 local KatarinaMenu = Menu("Katarina", "Katarina")
 KatarinaMenu:SubMenu("Combo", "Combo")
 KatarinaMenu.Combo:Boolean("KILL", "Kill when possible", true)
