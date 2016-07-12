@@ -815,4 +815,18 @@ else
 return 
 end
 
+local ver = "1.1"
+
+function AutoUpdate(data)
+    if tonumber(data) > tonumber(ver) then
+        PrintChat("New version found! " .. data)
+        PrintChat("Downloading update, please wait...")
+        DownloadFileAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/All%20Series.lua", SCRIPT_PATH .. "All Series.lua", function() PrintChat("Update Complete, please 2x F6!") return end)
+    else
+        PrintChat("No updates found!")
+    end
+end
+
+GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Versions/All%20Series.version", AutoUpdate)
+
 print("Hello Thanks for using All Series AIO")
