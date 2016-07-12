@@ -811,6 +811,116 @@ print ("Nautilus - The Titan Of The Depths Loaded")
 
 elseif GetObjectName(GetMyHero()) == "Braum" then
 
+if FileExist(COMMON_PATH.."MixLib.lua") then
+ require('MixLib')
+else
+ PrintChat("MixLib not found. Please wait for download.")
+ DownloadFileAsync("https://raw.githubusercontent.com/VTNEETS/NEET-Scripts/master/MixLib.lua", COMMON_PATH.."MixLib.lua", function() PrintChat("Downloaded MixLib. Please 2x F6!") return end)
+end
+
+require("OpenPredict")
+local BraumMenu = Menu("Braum", "The Heart of The Freljord")
+BraumMenu:SubMenu("Combo", "Combo")
+BraumMenu:SubMenu("misc", "Misc Settings")
+BraumMenu:SubMenu("SubReq",  "AutoLevel Settings")
+BraumMenu:SubMenu("draw", "Draws")
+
+BraumMenu.Combo:Boolean("Q", "Use Q", true)
+BraumMenu.Combo:Boolean("W", "Use W", true)
+BraumMenu.Combo:Boolean("E", "Use E", true)
+BraumMenu.Combo:Boolean("EALLY", "Use E To Defend Ally", true)
+BraumMenu.Combo:Boolean("R", "Use R", true)
+BraumMenu.Combo:Slider("WA", "W Slider % Ally HP", 40, 1, 100, 1)
+BraumMenu.Combo:Slider("EM", "E Slider % HP", 40, 1, 100, 1)
+BraumMenu.Combo:Slider("EA", "E Slider % Ally HP", 40, 1, 100, 1)
+BraumMenu.Combo:Slider("RE", "Use r on x enemies", 3, 1, 5, 1)
+BraumMenu.Combo:Slider("SR", "use r if enemy hp below x %", 40, 1, 100, 1)
+
+local skinMeta       = {["Braum"] = {"Classic", "Dragonslayer Braum", "El Tigre Braum", "Braum Lionheart"}}
+BraumMenu.misc:DropDown('skin', myHero.charName.. " Skins", 1, skinMeta[myHero.charName], HeroSkinChanger, true)
+BraumMenu.misc.skin.callback = function(model) HeroSkinChanger(myHero, model - 1) print(skinMeta[myHero.charName][model] .." ".. myHero.charName .. " Loaded!") end
+
+BraumMenu.SubReq:Boolean("LevelUp", "Level Up Skills", true)
+BraumMenu.SubReq:Slider("Start_Level", "Level to enable lvlUP", 1, 1, 18)
+BraumMenu.SubReq:DropDown("autoLvl", "Skill order", 1, {"Q-W-E",})
+BraumMenu.SubReq:Boolean("Humanizer", "Enable Level Up Humanizer", true)
+
+BraumMenu.draw:Slider("cwidth", "Circle Width", 1, 1, 10, 1)
+BraumMenu.draw:Slider("cquality", "Circle Quality", 1, 0, 8, 1)
+BraumMenu.draw:Boolean("qdraw", "Draw Q", true)
+BraumMenu.draw:ColorPick("qcirclecol", "Q Circle color", {255, 134, 26, 217}) 
+BraumMenu.draw:Boolean("wdraw", "Draw W", true)
+BraumMenu.draw:ColorPick("wcirclecol", "W Circle color", {255, 134, 26, 217})
+BraumMenu.draw:Boolean("rdraw", "Draw R", true)
+BraumMenu.draw:ColorPick("rcirclecol", "R Circle color", {255, 134, 26, 217})
+
+local BraumQ = {delay = 0.25, range = 1000, radius = 60, speed = 1700}
+local BraumR = {delay = 0.5, range = 1250, radius = 115, speed = 1400}
+local LevelUpTable={
+	[1]={_Q,_E,_W,_Q,_Q,_R,_Q,_E,_Q,_E,_R,_E,_E,_W,_W,_R,_W,_W} 
+}	
+
+OnTick (function()
+		if BraumMenu.SubReq.LevelUp:Value() and GetLevelPoints(myHero) >= 1 and GetLevel(myHero) >= BraumMenu.SubReq.Start_Level:Value() then
+	        if BraumMenu.SubReq.Humanizer:Value() then
+	            DelayAction(function() LevelSpell(LevelUpTable[BraumMenu.SubReq.autoLvl:Value()][GetLevel(myHero)-GetLevelPoints(myHero)+1]) end, math.random(0.3286,1.33250))
+	        else
+	            LevelSpell(LevelUpTable[BraumMenu.SubReq.autoLvl:Value()][GetLevel(myHero)-GetLevelPoints(myHero)+1])
+	        end
+		end
+end)
+
+OnDraw (function()
+	if not IsDead(myHero) then
+		if BraumMenu.draw.qdraw:Value() and Ready(_Q) then
+			DrawCircle(GetOrigin(myHero), 1000, BraumMenu.draw.cwidth:Value(), BraumMenu.draw.cquality:Value(), BraumMenu.draw.qcirclecol:Value())
+		end
+		if BraumMenu.draw.wdraw:Value() and Ready(_W) then 
+			DrawCircle(GetOrigin(myHero), 650, BraumMenu.draw.cwidth:Value(), BraumMenu.draw.cquality:Value(), BraumMenu.draw.wcirclecol:Value())
+		end
+		if BraumMenu.draw.edraw:Value() and Ready(_R) then 
+			DrawCircle(GetOrigin(myHero), 1250, BraumMenu.draw.cwidth:Value(), BraumMenu.draw.cquality:Value(), BraumMenu.draw.rcirclecol:Value())
+		end
+	end
+end)
+
+OnTick(function()
+	local target = GetCurrentTarget()
+	if Mix:Mode() == "Combo" then
+		if BraumMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 1000) then
+		local QPred = GetPrediction(target,BraumQ)
+			if QPred.hitChance > 0.2 and not QPred:mCollision(1) then
+				CastSkillShot(_Q,QPred.castPos)
+			end
+		end
+		if Ready(_E) and GetPercentHP(myHero) <= BraumMenu.Combo.EM:Value() and BraumMenu.Combo.E:Value() then
+			CastSkillShot(_E, target.pos)
+		end
+		if Ready(_R) and EnemiesAround(myHero, 1250) >= BraumMenu.Combo.RE:Value() and BraumMenu.Combo.R:Value() then
+		local RPred = GetPrediction(target,BraumR)
+			if RPred.hitChance > 0.4 then
+				CastSkillShot(_R,RPred.castPos)
+			end
+		end
+		if Ready(_R) and GetPercentHP(target) <= BraumMenu.Combo.SR:Value() and BraumMenu.Combo.R:Value() then
+		local RPred = GetPrediction(target,BraumR)
+			if RPred.hitChance > 0.4 then
+				CastSkillShot(_R,RPred.castPos)
+			end
+		end
+		for _, ally in pairs(GetAllyHeroes()) do
+			if Ready(_W) and GetPercentHP(ally) <= BraumMenu.Combo.WA:Value() and BraumMenu.Combo.W:Value() and GetDistance(ally, myHero) < 650 then
+				CastTargetSpell(ally, _W)
+			end
+			if Ready(_E) and GetPercentHP(ally) <= BraumMenu.Combo.EA:Value() and BraumMenu.Combo.EALLY:Value() then
+				CastSkillShot(_E, target.pos)
+			end
+		end
+	end
+end)
+
+print("Braum Loaded")
+
 else 
 return 
 end
