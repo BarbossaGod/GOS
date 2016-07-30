@@ -15,9 +15,9 @@ GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Ver
 
 skinMeta       = 
 {
-    ["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
-    ["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy"},
-    ["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter"}
+    	["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
+	["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy"},
+	["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter"}
 	["Alistar"] = {"Classic", "Black", "Golden", "Matador", "Longhorn", "Unchained", "Infernal", "Sweeper", "Marauder"}
 	["Amumu"] = {"Classic", "Pharaoh", "Vancouver", "Emumu", "Re-Gifted", "Almost Prom King", "Little Knight", "Sad Robot", "Surprise Party"}
 	["Anivia"] = {"Classic", "Team Spirit", "Bird of Prey", "Noxus Hunter", "Hextech", "Black Frost", "Prehistoric"}
