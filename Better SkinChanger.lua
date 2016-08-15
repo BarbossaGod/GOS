@@ -1,4 +1,4 @@
-local ver = "2.0"
+local ver = "3.0"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -22,7 +22,7 @@ skinMeta       =
 	["Amumu"] = {"Classic", "Pharaoh", "Vancouver", "Emumu", "Re-Gifted", "Almost Prom King", "Little Knight", "Sad Robot", "Surprise Party"},
 	["Anivia"] = {"Classic", "Team Spirit", "Bird of Prey", "Noxus Hunter", "Hextech", "Black Frost", "Prehistoric"},
 	["Annie"] = {"Classic", "Goth", "Red Riding", "In Wonderland", "Prom Queen", "FrostFire", "Reverse", "FrankenTibbers", "Panda", "SweatHeart", "Hextech"},
-	["Ashe"] = {"Classic", "Freljord", "Sherwood Forest", "Woad", "Queen", "Amethyst", "HeartSeeker", "Marauder"},
+	["Ashe"] = {"Classic", "Freljord", "Sherwood Forest", "Woad", "Queen", "Amethyst", "HeartSeeker", "Marauder", "Project"},
 	["AurelionSol"] = {"Classic", "Ashen Lord"},
 	["Azir"] = {"Classic", "Galactic", "GraveLord"},
 	["Bard"] = {"Classic", "Elderwood", "Snow Day"},
@@ -37,7 +37,7 @@ skinMeta       =
 	["Diana"] = {"Classic", "Dark Valkyrie", "Lunar Goddess", "Infernal"},
 	["DrMundo"] = {"Classic", "Toxic", "Verse", "Corporate", "Mundo", "Executioner", "RageBorn", "TPA", "Pool Party", "El Macho"},
 	["Draven"] = {"Classic", "Soul Reaver", "Gladiator", "PrimeTime", "Pool Party", "Beast Hunter", "Draven"},
-	["Ekko"] = {"Classic", "Sandstorm", "Academy"},
+	["Ekko"] = {"Classic", "Sandstorm", "Academy", "Project"},
 	["Elise"] = {"Classic", "Death Blossom", "Victorious", "Blood Moon"},
 	["Evelynn"] = {"Classic", "Shadow", "Masquerade", "Tango", "Safecracker"},
 	["Ezreal"] = {"Classic", "Nottingham", "Striker", "Frosted", "Explorer", "Pulsefire", "TPA", "Debonair", "Ace of Spades"},
@@ -64,7 +64,7 @@ skinMeta       =
 	["Karma"] = {"Classic", "Sun Goddess", "Sakura", "Traditional", "Order of the Lotus", "Warden"},
 	["Karthus"] = {"Classic", "Phantom", "Statue of", "Grim Reaper", "Pentakill", "Fnatic"},
 	["Kassadin"] = {"Classic", "Festival", "Deep One", "Pre-Void", "Harbinger", "Cosmic Reaver"},
-	["Katarina"] = {"Classic", "Mercenary", "Red Card", "Bilgewater", "Kitty Cat", "High Command", "Sandstorm", "Slay Belle", "Warring Kingdoms"},
+	["Katarina"] = {"Classic", "Mercenary", "Red Card", "Bilgewater", "Kitty Cat", "High Command", "Sandstorm", "Slay Belle", "Warring Kingdoms", "Project"},
 	["Kayle"] = {"Classic", "Silver", "Viridian", "Unmasked", "Battleborn", "Judgment", "Aether Wing", "Riot", "Iron Inquisitor"},
 	["Kennen"] = {"Classic", "Deadly", "Swamp Master", "Karate", "Kennen M.D.", "Arctic Ops", "Blood Moon"},
 	["Khazix"] = {"Classic", "Mecha", "Guardian of the Sands", "Death Blossom"},
