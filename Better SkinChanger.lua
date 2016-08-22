@@ -1,4 +1,4 @@
-local ver = "4.1"
+local ver = "4.2"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -69,6 +69,7 @@ skinMeta       =
 	["Kennen"] = {"Classic", "Deadly", "Swamp Master", "Karate", "Kennen M.D.", "Arctic Ops", "Blood Moon"},
 	["Khazix"] = {"Classic", "Mecha", "Guardian of the Sands", "Death Blossom"},
 	["Kindred"] = {"Classic", "Shadowfire", "Super Galaxy"},
+	["Kled"] = {"Classic", "Sir"},
 	["KogMaw"] = {"Classic", "Caterpillar", "Sonoran", "Monarch", "Reindeer", "Lion Dance", "Deep Sea", "Jurassic", "Battlecast"},
 	["Leblanc"] = {"Classic", "Wicked", "Prestigious", "Mistletoe", "Ravenborn", "Elderwood"},
 	["LeeSin"] = {"Classic", "Traditional", "Acolyte", "Dragon Fist", "Muay Thai", "Pool Party", "SKT T1", "Chroma1", "Chroma2", "Chroma3", "Knockout"},
