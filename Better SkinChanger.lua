@@ -1,4 +1,4 @@
-local ver = "4.2"
+local ver = "4.3"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -15,9 +15,9 @@ GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Ver
 
 skinMeta       = 
 {
-    ["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
-    ["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy"},
-    ["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter"},
+	["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
+    	["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy", "Arcade"},
+	["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter"},
 	["Alistar"] = {"Classic", "Black", "Golden", "Matador", "Longhorn", "Unchained", "Infernal", "Sweeper", "Marauder", "SKT T1"},
 	["Amumu"] = {"Classic", "Pharaoh", "Vancouver", "Emumu", "Re-Gifted", "Almost Prom King", "Little Knight", "Sad Robot", "Surprise Party"},
 	["Anivia"] = {"Classic", "Team Spirit", "Bird of Prey", "Noxus Hunter", "Hextech", "Black Frost", "Prehistoric"},
@@ -32,7 +32,7 @@ skinMeta       =
 	["Caitlyn"] = {"Classic", "Resistance", "Sheriff", "Safari", "Arctic Warfare", "Officer", "Headhunter", "Chroma1", "Chroma2", "Chroma3", "Lunar Wraith"},
 	["Cassiopeia"] = {"Classic", "Desperada", "Siren", "Mythic", "Chroma1", "Chroma2", "Chroma3", "Jade Fang"},
 	["Chogath"] = {"Classic", "NightMare", "GentleMan", "Loch Ness", "Jurrasic", "Battlecast Prime", "Prehistoric"},
-	["Corki"] = {"Classic", "UFO", "Ice Toboggan", "Red Baron", "Hot Rod", "Urf Rider", "DragonWing", "Fnatic"},
+	["Corki"] = {"Classic", "UFO", "Ice Toboggan", "Red Baron", "Hot Rod", "Urf Rider", "DragonWing", "Fnatic", "Arcade"},
 	["Darius"] = {"Classic", "Lord", "BioForge", "Woad King", "DunkMaster", "Chroma1", "Chroma2", "Chroma3", "Academy"},
 	["Diana"] = {"Classic", "Dark Valkyrie", "Lunar Goddess", "Infernal"},
 	["DrMundo"] = {"Classic", "Toxic", "Verse", "Corporate", "Mundo", "Executioner", "RageBorn", "TPA", "Pool Party", "El Macho"},
@@ -40,7 +40,7 @@ skinMeta       =
 	["Ekko"] = {"Classic", "Sandstorm", "Academy", "Project"},
 	["Elise"] = {"Classic", "Death Blossom", "Victorious", "Blood Moon", "SKT T1"},
 	["Evelynn"] = {"Classic", "Shadow", "Masquerade", "Tango", "Safecracker"},
-	["Ezreal"] = {"Classic", "Nottingham", "Striker", "Frosted", "Explorer", "Pulsefire", "TPA", "Debonair", "Ace of Spades"},
+	["Ezreal"] = {"Classic", "Nottingham", "Striker", "Frosted", "Explorer", "Pulsefire", "TPA", "Debonair", "Ace of Spades", "Arcade"},
 	["Fiddlesticks"] = {"Classic", "Spectral", "Union Jack", "Bandito", "Pumpkinhead", "Fiddle Me Timbers", "Surprise Party", "Dark Candy", "Risen"},
 	["Fiora"] = {"Classic", "Royal Guard", "Nightraven", "Headmistress", "PROJECT"},
 	["Fizz"] = {"Classic", "Atlantean", "Tundra", "Fisherman", "Void", "Cottontail", "Chroma1", "Chroma2", "Chroma3", "Super Galaxy"},
@@ -151,7 +151,7 @@ skinMeta       =
 local Menu = MenuConfig(myHero.charName, myHero.charName.." Skin Changer")
 Menu:SubMenu("misc", "Misc Settings")
 Menu.misc:DropDown('skin', myHero.charName.. " Skins", 1, skinMeta[myHero.charName], 
-    function(model)
+	function(model)
         HeroSkinChanger(myHero, model - 1) print(skinMeta[myHero.charName][model] .." ".. myHero.charName .. " Loaded!") 
     end,
 true)
