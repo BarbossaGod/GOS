@@ -1,4 +1,4 @@
-local ver = "4.3"
+local ver = "4.4"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -15,9 +15,9 @@ GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Ver
 
 skinMeta       = 
 {
-	["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
-    	["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy", "Arcade"},
-	["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter"},
+    ["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
+    ["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy", "Arcade"},
+    ["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter"},
 	["Alistar"] = {"Classic", "Black", "Golden", "Matador", "Longhorn", "Unchained", "Infernal", "Sweeper", "Marauder", "SKT T1"},
 	["Amumu"] = {"Classic", "Pharaoh", "Vancouver", "Emumu", "Re-Gifted", "Almost Prom King", "Little Knight", "Sad Robot", "Surprise Party"},
 	["Anivia"] = {"Classic", "Team Spirit", "Bird of Prey", "Noxus Hunter", "Hextech", "Black Frost", "Prehistoric"},
@@ -137,7 +137,7 @@ skinMeta       =
 	["Vladimir"] = {"Classic", "Count", "Marquis", "Nosferatu", "Vandal", "Blood Lord", "Soulstealer", "Academy"},
 	["Volibear"] = {"Classic", "Thunder Lord", "Northern Storm", "Runeguard", "Captain", "El Rayo"},
 	["Warwick"] = {"Classic", "Grey", "Urf the Manatee", "Big Bad", "Tundra Hunter", "Feral", "Firefang", "Hyena", "Marauder"},
-	["Wukong"] = {"Classic", "Volcanic", "General", "Jade Dragon", "Underworld", "Radiant"},
+	["MonkeyKing"] = {"Classic", "Volcanic", "General", "Jade Dragon", "Underworld", "Radiant"},
 	["Xerath"] = {"Classic", "Runeborn", "Battlecast", "Scorched Earth", "Guardian of the Sands"},
 	["XinZhao"] = {"Classic", "Commando", "Imperial", "Viscero", "Winged Hussar", "Warring Kingdoms", "Secret Agent"},
 	["Yasuo"] = {"Classic", "High Noon", "PROJECT", "Blood Moon"},
