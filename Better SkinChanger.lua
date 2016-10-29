@@ -1,4 +1,4 @@
-local ver = "4.4"
+local ver = "4.5"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -15,9 +15,9 @@ GetWebResultAsync("https://raw.githubusercontent.com/Farscape2000/GOS/master/Ver
 
 skinMeta       = 
 {
-    ["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
-    ["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy", "Arcade"},
-    ["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter"},
+   	["Aatrox"] = {"Classic", "Justicar", "Mecha", "Sea Hunter"},
+    	["Ahri"] = {"Classic", "Dynasty", "MidNight", "FoxFire", "PopStar", "Challenger", "Academy", "Arcade"},
+   	["Akali"] = {"Classic", "Nurse", "Blood Moon", "Silverfang", "Headhunter", "Sashimi"},
 	["Alistar"] = {"Classic", "Black", "Golden", "Matador", "Longhorn", "Unchained", "Infernal", "Sweeper", "Marauder", "SKT T1"},
 	["Amumu"] = {"Classic", "Pharaoh", "Vancouver", "Emumu", "Re-Gifted", "Almost Prom King", "Little Knight", "Sad Robot", "Surprise Party"},
 	["Anivia"] = {"Classic", "Team Spirit", "Bird of Prey", "Noxus Hunter", "Hextech", "Black Frost", "Prehistoric"},
@@ -54,12 +54,12 @@ skinMeta       =
 	["Heimerdinger"] = {"Classic", "Alien Invader", "Blast Zone", "Piltover Customs", "Snowmerdinger", "Hazmat"},
 	["Illaoi"] = {"Classic", "Void Bringer"},
 	["Irelia"] = {"Classic", "Nightblade", "Aviator", "Infiltrator", "Frostblade", "Order of the Lotus"},
-	["Janna"] = {"Classic", "Tempest", "Hextech", "Frost Queen", "Victorious", "Forecast", "Fnatic"},
+	["Janna"] = {"Classic", "Tempest", "Hextech", "Frost Queen", "Victorious", "Forecast", "Fnatic", "Star Guardian"},
 	["JarvanIV"] = {"Classic", "Commando", "Dragonslayer", "Darkforge", "Victorious", "Warring Kingdoms", "Fnatic"},
 	["Jax"] = {"Classic", "The Mighty", "Vandal", "Angler", "PAX", "Jaximus", "Temple", "Nemesis", "SKT T1", "Chroma1", "Chroma2", "Chroma3", "Warden"},
 	["Jayce"] = {"Classic", "Full Metal", "Debonair", "Forsaken"},
 	["Jhin"] = {"Classic", "High Noon"},
-	["Jinx"] = {"Classic", "Mafia", "Firecracker", "Slayer"},
+	["Jinx"] = {"Classic", "Mafia", "Firecracker", "Slayer", "Star Guardian"},
 	["Kalista"] = {"Classic", "Blood Moon", "Championship", "SKT T1"},
 	["Karma"] = {"Classic", "Sun Goddess", "Sakura", "Traditional", "Order of the Lotus", "Warden"},
 	["Karthus"] = {"Classic", "Phantom", "Statue of", "Grim Reaper", "Pentakill", "Chroma1", "Chroma2", "Chroma3", "Fnatic"},
@@ -73,10 +73,10 @@ skinMeta       =
 	["KogMaw"] = {"Classic", "Caterpillar", "Sonoran", "Monarch", "Reindeer", "Lion Dance", "Deep Sea", "Jurassic", "Battlecast"},
 	["Leblanc"] = {"Classic", "Wicked", "Prestigious", "Mistletoe", "Ravenborn", "Elderwood"},
 	["LeeSin"] = {"Classic", "Traditional", "Acolyte", "Dragon Fist", "Muay Thai", "Pool Party", "SKT T1", "Chroma1", "Chroma2", "Chroma3", "Knockout"},
-	["Leona"] = {"Classic", "Valkyrie", "Defender", "Iron Solari", "Pool Party", "Chroma1", "Chroma2", "Chroma3", "PROJECT"},
+	["Leona"] = {"Classic", "Valkyrie", "Defender", "Iron Solari", "Pool Party", "Chroma1", "Chroma2", "Chroma3", "PROJECT", "Barbecue"},
 	["Lissandra"] = {"Classic", "Bloodstone", "Blade Queen", "Program"},
 	["Lucian"] = {"Classic", "Hired Gun", "Striker", "Chroma1", "Chroma2", "Chroma3", "PROJECT"},
-	["Lulu"] = {"Classic", "Bittersweet", "Wicked", "Dragon Trainer", "Winter Wonder", "Pool Party"},
+	["Lulu"] = {"Classic", "Bittersweet", "Wicked", "Dragon Trainer", "Winter Wonder", "Pool Party", "Star Guardian"},
 	["Lux"] = {"Classic", "Sorceress", "Spellthief", "Commando", "Imperial", "Steel Legion", "Star Guardian"},
 	["Malphite"] = {"Classic", "Shamrock", "Coral Reef", "Marble", "Obsidian", "Glacial", "Mecha", "Ironside"},
 	["Malzahar"] = {"Classic", "Vizier", "Shadow Prince", "Djinn", "Overlord", "Snow Day"},
@@ -91,10 +91,10 @@ skinMeta       =
 	["Nidalee"] = {"Classic", "Snow Bunny", "Leopard", "French Maid", "Pharaoh", "Bewitching", "Headhunter", "Warring Kingdoms", "Challenger"},
 	["Nocturne"] = {"Classic", "Frozen Terror", "Void", "Ravager", "Haunting", "Eternum", "Cursed Revenant"},
 	["Nunu"] = {"Classic", "Sasquatch", "Workshop", "Grungy", "Bot", "Demolisher", "TPA", "Zombie"},
-	["Olaf"] = {"Classic", "Forsaken", "Glacial", "Br", "Pentakill", "Marauder"},
+	["Olaf"] = {"Classic", "Forsaken", "Glacial", "Br", "Pentakill", "Marauder", "Butcher"},
 	["Orianna"] = {"Classic", "Gothic", "Sewn Chaos", "Bladecraft", "TPA", "Winter Wonder", "Heartseeker"},
-	["Pantheon"] = {"Classic", "Myrmidon", "Ruthless", "Perseus", "Full Metal", "Glaive Warrior", "Dragonslayer", "Slayer"},
-	["Poppy"] = {"Classic", "Noxus", "Lolli", "Blacksmith", "Ragdoll", "Battle Regalia", "Scarlet Hammer"},
+	["Pantheon"] = {"Classic", "Myrmidon", "Ruthless", "Perseus", "Full Metal", "Glaive Warrior", "Dragonslayer", "Slayer", "Baker"},
+	["Poppy"] = {"Classic", "Noxus", "Lolli", "Blacksmith", "Ragdoll", "Battle Regalia", "Scarlet Hammer", "Star Guardian"},
 	["Quinn"] = {"Classic", "Phoenix", "Woad Scout", "Corsair"},
 	["Rammus"] = {"Classic", "King", "Chrome", "Molten", "Freljord", "Ninja", "Full Metal", "Guardian of the Sands"},
 	["RekSai"] = {"Classic", "Eternum", "Pool Party"},
@@ -129,7 +129,7 @@ skinMeta       =
 	["Udyr"] = {"Classic", "Black Belt", "Primal", "Spirit Guard", "Definitely Not"},
 	["Urgot"] = {"Classic", "Giant Enemy Crab", "Butcher", "Battlecast"},
 	["Varus"] = {"Classic", "Blight Crystal", "Arclight", "Arctic Ops", "Heartseeker", "Swiftbolt", "Dark Star"},
-	["Vayne"] = {"Classic", "Vindicator", "Aristocrat", "Dragonslayer", "Heartseeker", "SKT T1", "Chroma1", "Chroma2", "Chroma3", "Arclight"},
+	["Vayne"] = {"Classic", "Vindicator", "Aristocrat", "Dragonslayer", "Heartseeker", "SKT T1", "Arclight", "Chroma2", "Chroma3", "Chroma1", "Soulstealer"},
 	["Veigar"] = {"Classic", "White Mage", "Curling", "Greybeard", "Leprechaun", "Baron Von", "Superb Villain", "Bad Santa", "Final Boss"},
 	["VelKoz"] = {"Classic", "Battlecast", "Arclight", "Definitely Not"},
 	["Vi"] = {"Classic", "Neon Strike", "Officer", "Debonair", "Demon"},
@@ -156,4 +156,4 @@ Menu.misc:DropDown('skin', myHero.charName.. " Skins", 1, skinMeta[myHero.charNa
     end,
 true)
 
-print("Enjoy Your Free Skins ~Scortch")
+print("Enjoy Your Free Skins ~Barbossa")
