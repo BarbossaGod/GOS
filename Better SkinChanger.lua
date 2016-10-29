@@ -1,4 +1,4 @@
-local ver = "4.6"
+local ver = "4.7"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -54,6 +54,7 @@ skinMeta       =
 	["Heimerdinger"] = {"Classic", "Alien Invader", "Blast Zone", "Piltover Customs", "Snowmerdinger", "Hazmat"},
 	["Illaoi"] = {"Classic", "Void Bringer"},
 	["Irelia"] = {"Classic", "Nightblade", "Aviator", "Infiltrator", "Frostblade", "Order of the Lotus"},
+	["Ivern"] = {"Classic", "Candy King"},
 	["Janna"] = {"Classic", "Tempest", "Hextech", "Frost Queen", "Victorious", "Forecast", "Fnatic", "Star Guardian"},
 	["JarvanIV"] = {"Classic", "Commando", "Dragonslayer", "Darkforge", "Victorious", "Warring Kingdoms", "Fnatic"},
 	["Jax"] = {"Classic", "The Mighty", "Vandal", "Angler", "PAX", "Jaximus", "Temple", "Nemesis", "SKT T1", "Chroma1", "Chroma2", "Chroma3", "Warden"},
