@@ -1,4 +1,4 @@
-local ver = "5.2"
+local ver = "5.3"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -120,7 +120,7 @@ skinMeta       =
 	["Taliyah"] = {"Classic", "Freljord"},
 	["Talon"] = {"Classic", "Renegade", "Crimson Elite", "Dragonblade", "SSW"},
 	["Taric"] = {"Classic", "Emerald", "Armor of the Fifth Age", "Bloodstone"},
-	["Teemo"] = {"Classic", "Happy Elf", "Recon", "Badger", "Astronaut", "Cottontail", "Super", "Panda", "Omega Squad", "Little Devil"},
+	["Teemo"] = {"Classic", "Happy Elf", "Recon", "Badger", "Astronaut", "Cottontail", "Super", "Panda", "Omega Squad", "Cottontail Chroma 1", "Cottontail Chroma 2", "Cottontail Chroma 3", "Cottontail Chroma 4", "Cottontail Chroma 5", "Little Devil"},
 	["Thresh"] = {"Classic", "Deep Terror", "Championship", "Blood Moon", "SSW", "Dark Star"},
 	["Tristana"] = {"Classic", "Riot Girl", "Earnest Elf", "Firefighter", "Guerilla", "Buccaneer", "Rocket Girl", "Chroma1", "Chroma2", "Chroma3", "Dragon Trainer", "Bewitching"},
 	["Trundle"] = {"Classic", "Lil' Slugger", "Junkyard", "Traditional", "Constable", "WorldBreaker"},
