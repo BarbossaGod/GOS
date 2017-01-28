@@ -12,7 +12,7 @@ end
 
 GetWebResultAsync("https://raw.githubusercontent.com/BarbossaGod/GOS/master/Versions/Better%20Skinchanger.version", AutoUpdate)
 
-
+-- Ordering Chromas ATM of Jan 27
 skinMeta       = 
 {
    	["Aatrox"] = { "default", "Justicar Aatrox", "Mecha Aatrox", "Sea Hunter Aatrox" }, 
