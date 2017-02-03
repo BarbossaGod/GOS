@@ -16,7 +16,7 @@ GetWebResultAsync("https://raw.githubusercontent.com/BarbossaGod/GOS/master/Vers
 skinMeta       = 
 {
    	["Aatrox"] = { "Classic", "Justicar Aatrox", "Mecha Aatrox", "Sea Hunter Aatrox" }, 
-	["Ahri"] = { "Classic", "Dynasty Ahri", "Midnight Ahri", "Foxfire Ahri", "Popstar Ahri", "Challenger Ahri", "Academy Ahri", "Arcade Ahri" }, 
+	["Ahri"] = { "Classic", "Dynasty Ahri", "Midnight Ahri", "Foxfire Ahri", "Popstar Ahri", "Challenger Ahri", "Academy Ahri", "Arcade Ahri", "Chroma 1", "Chroma 2", "Chroma 3", "Chroma 4", "Chroma 5", "Chroma 6" }, 
 	["Akali"] = { "Classic", "Stinger Akali", "Crimson Akali", "All-star Akali", "Nurse Akali", "Blood Moon Akali", "Silverfang Akali", "Headhunter Akali", "Sashimi Akali" }, 
 	["Alistar"] = { "Classic", "Black Alistar", "Golden Alistar", "Matador Alistar", "Longhorn Alistar", "Unchained Alistar", "Infernal Alistar", "Sweeper Alistar", "Marauder Alistar", "SKT T1 Alistar" }, 
 	["Amumu"] = { "Classic", "Pharaoh Amumu", "Vancouver Amumu", "Emumu", "Re-Gifted Amumu", "Almost-Prom King Amumu", "Little Knight Amumu", "Sad Robot Amumu", "Surprise Party Amumu", "Sewn Chaos Amumu" }, 
@@ -73,7 +73,7 @@ skinMeta       =
 	["Kindred"] = { "Classic", "Shadowfire Kindred", "Super Galaxy Kindred" }, 
 	["Kled"] = { "Classic", "Sir Kled" }, 
 	["KogMaw"] = { "Classic", "Caterpillar Kog'Maw", "Sonoran Kog'Maw", "Monarch Kog'Maw", "Reindeer Kog'Maw", "Lion Dance Kog'Maw", "Deep Sea Kog'Maw", "Jurassic Kog'Maw", "Battlecast Kog'Maw" }, 
-	["Leblanc"] = { "Classic", "Wicked LeBlanc", "Prestigious LeBlanc", "Mistletoe LeBlanc", "Ravenborn LeBlanc", "Elderwood LeBlanc" }, 
+	["Leblanc"] = { "Classic", "Wicked LeBlanc", "Prestigious LeBlanc", "Mistletoe LeBlanc", "Ravenborn LeBlanc", "Elderwood LeBlanc", "Chroma 1", "Chroma 2", "Chroma 3", "Chroma 4", "Chroma 5", "Chroma 6" }, 
 	["LeeSin"] = { "Classic", "Traditional Lee Sin", "Acolyte Lee Sin", "Dragon Fist Lee Sin", "Muay Thai Lee Sin", "Pool Party Lee Sin", "SKT T1 Lee Sin", "Black Chroma", "Blue Chroma", "Yellow Chroma", "Knockout Lee Sin" }, 
 	["Leona"] = { "Classic", "Valkyrie Leona", "Defender Leona", "Iron Solari Leona", "Pool Party Leona", "Pink Chroma", "Lemon Chroma", "Azure Chroma", "PROJECT: Leona", "Barbecue Leona" }, 
 	["Lissandra"] = { "Classic", "Bloodstone Lissandra", "Blade Queen Lissandra", "Program Lissandra" }, 
@@ -158,4 +158,4 @@ Menu.misc:DropDown('skin', myHero.charName.. " Skins", 1, skinMeta[myHero.charNa
     end,
 true)
 
-print("Enjoy Your Free Skins ~Scortch")
+print("Enjoy Your Free Skins ~Scortch/Zuffy")
