@@ -1,4 +1,4 @@
-local ver = "5.35"
+local ver = "5.4"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -35,7 +35,7 @@ skinMeta       =
 	["Chogath"] = { "Classic", "Nightmare Cho'Gath", "Gentleman Cho'Gath", "Loch Ness Cho'Gath", "Jurassic Cho'Gath", "Battlecast Prime Cho'Gath", "Prehistoric Cho'Gath" }, 
 	["Corki"] = { "Classic", "UFO Corki", "Ice Toboggan Corki", "Red Baron Corki", "Hot Rod Corki", "Urfrider Corki", "Dragonwing Corki", "Fnatic Corki", "Arcade Corki" }, 
 	["Darius"] = { "Classic", "Lord", "BioForge", "Woad King", "DunkMaster", "Black Iron Chroma", "Bronze Chroma", "Copper Chroma", "Academy", "Amethyst", "Aquamarine", "Catseye", "Citrine", "Emerald" }, 
-	["Diana"] = { "Classic", "Dark Valkyrie Diana", "Lunar Goddess Diana", "Infernal Diana", "Amethyst Chroma", "Aquamarine Chroma", "Obsidian Chroma", "Pearl Chroma", "Ruby Chroma", "Peridot Chroma" }, 
+	["Diana"] = { "Classic", "Dark Valkyrie Diana", "Lunar Goddess Diana", "Infernal Diana", "Amethyst Chroma", "Aquamarine Chroma", "Obsidian Chroma", "Pearl Chroma", "Ruby Chroma", "Peridot Chroma", "Blood Moon Diana" }, 
 	["Draven"] = { "Classic", "Soul Reaver Draven", "Gladiator Draven", "Primetime Draven", "Pool Party Draven", "Beast Hunter Draven", "Draven Draven" }, 
 	["DrMundo"] = { "Classic", "Toxic Dr. Mundo", "Mr. Mundoverse", "Corporate Mundo", "Mundo Mundo", "Executioner Mundo", "Rageborn Mundo", "TPA Mundo", "Pool Party Mundo", "El Macho Mundo" }, 
 	["Ekko"] = { "Classic", "Sandstorm Ekko", "Academy Ekko", "PROJECT: Ekko" }, 
@@ -60,7 +60,7 @@ skinMeta       =
 	["JarvanIV"] = { "Classic", "Commando Jarvan IV", "Dragonslayer Jarvan IV", "Darkforge Jarvan IV", "Victorious Jarvan IV", "Warring Kingdoms Jarvan IV", "Fnatic Jarvan IV" }, 
 	["Jax"] = { "Classic", "The Mighty Jax", "Vandal Jax", "Angler Jax", "PAX Jax", "Jaximus", "Temple Jax", "Nemesis Jax", "SKT T1 Jax", "Cream Chroma", "Amber Chroma", "Brick Chroma", "Warden Jax" }, 
 	["Jayce"] = { "Classic", "Full Metal Jayce", "Debonair Jayce", "Forsaken Jayce", "Jayce Brighthammer" }, 
-	["Jhin"] = { "Classic", "High Noon Jhin" }, 
+	["Jhin"] = { "Classic", "High Noon Jhin", "Blood Moon Jhin" }, 
 	["Jinx"] = { "Classic", "Mafia Jinx", "Firecracker Jinx", "Slayer Jinx", "Star Guardian Jinx" }, 
 	["Kalista"] = { "Classic", "Blood Moon Kalista", "Championship Kalista", "SKT T1 Kalista" }, 
 	["Karma"] = { "Classic", "Sun Goddess Karma", "Sakura Karma", "Traditional Karma", "Order of the Lotus Karma", "Warden Karma", "Winter Wonder Karma" }, 
@@ -120,14 +120,14 @@ skinMeta       =
 	["Syndra"] = { "Classic", "Justicar Syndra", "Atlantean Syndra", "Queen of Diamonds Syndra", "Snow Day Syndra" }, 
 	["TahmKench"] = { "Classic", "Master Chef Tahm Kench", "Urf Kench" }, 
 	["Taliyah"] = { "Classic", "Freljord Taliyah" }, 
-	["Talon"] = { "Classic", "Renegade Talon", "Crimson Elite Talon", "Dragonblade Talon", "SSW Talon" }, 
+	["Talon"] = { "Classic", "Renegade Talon", "Crimson Elite Talon", "Dragonblade Talon", "SSW Talon", "Blood Moon Talon" }, 
 	["Taric"] = { "Classic", "Emerald Taric", "Armor of the Fifth Age Taric", "Bloodstone Taric", "Pool Party Taric" }, 
 	["Teemo"] = { "Classic", "Happy Elf Teemo", "Recon Teemo", "Badger Teemo", "Astronaut Teemo", "Cottontail Teemo", "Super Teemo", "Panda Teemo", "Omega Squad Teemo", "Cottontail Chroma 1", "Cottontail Chroma 2", "Cottontail Chroma 3", "Cottontail Chroma 4", "Cottontail Chroma 5", "Little Devil Teemo" }, 
 	["Thresh"] = { "Classic", "Deep Terror Thresh", "Championship Thresh", "Blood Moon Thresh", "SSW Thresh", "Dark Star Thresh" }, 
 	["Tristana"] = { "Classic", "Riot Girl Tristana", "Earnest Elf Tristana", "Firefighter Tristana", "Guerilla Tristana", "Buccaneer Tristana", "Rocket Girl Tristana", "Navy Chroma", "Purple Chroma", "Orange Chroma", "Dragon Trainer Tristana", "Bewitching Tristana" }, 
 	["Trundle"] = { "Classic", "Lil' Slugger Trundle", "Junkyard Trundle", "Traditional Trundle", "Constable Trundle", "Worldbreaker Trundle" }, 
 	["Tryndamere"] = { "Classic", "Highland Tryndamere", "King Tryndamere", "Viking Tryndamere", "Demonblade Tryndamere", "Sultan Tryndamere", "Warring Kingdoms Tryndamere", "Nightmare Tryndamere", "Beast Hunter Tryndamere" }, 
-	["TwistedFate"] = { "Classic", "PAX Twisted Fate", "Jack of Hearts Twisted Fate", "The Magnificent Twisted Fate", "Tango Twisted Fate", "High Noon Twisted Fate", "Musketeer Twisted Fate", "Underworld Twisted Fate", "Red Card Twisted Fate", "Cutpurse Twisted Fate" }, 
+	["TwistedFate"] = { "Classic", "PAX Twisted Fate", "Jack of Hearts Twisted Fate", "The Magnificent Twisted Fate", "Tango Twisted Fate", "High Noon Twisted Fate", "Musketeer Twisted Fate", "Underworld Twisted Fate", "Red Card Twisted Fate", "Cutpurse Twisted Fate", "Blood Moon Twisted Fate" }, 
 	["Twitch"] = { "Classic", "Kingpin Twitch", "Whistler Village Twitch", "Medieval Twitch", "Gangster Twitch", "Vandal Twitch", "Pickpocket Twitch", "SSW Twitch" }, 
 	["Udyr"] = { "Classic", "Black Belt Udyr", "Primal Udyr", "Spirit Guard Udyr", "Definitely Not Udyr" }, 
 	["Urgot"] = { "Classic", "Giant Enemy Crabgot", "Butcher Urgot", "Battlecast Urgot" }, 
